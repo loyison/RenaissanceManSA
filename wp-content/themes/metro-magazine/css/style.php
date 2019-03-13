@@ -5,7 +5,8 @@
 
 function metro_magazine_dynamic_css(){
     
-    $color_scheme = get_theme_mod( 'metro_magazine_color_scheme', '#386FA7' );
+    // $color_scheme = get_theme_mod( 'metro_magazine_color_scheme', '#386FA7' );
+    /*$color_scheme = get_theme_mod( 'metro_magazine_color_scheme', '#ffffff' );
     
     echo "<style type='text/css' media='all'>"; ?>
     
@@ -145,7 +146,7 @@ function metro_magazine_dynamic_css(){
     }
     
     
-    <?php echo "</style>";
+    <?php echo "</style>"; */
 }
 
 /**

@@ -40,7 +40,7 @@ add_action( 'save_post',     'metro_magazine_category_transient_flusher' );
  * @see metro_magazine_excerpt_more
  * @see metro_magazine_excerpt_length
 */
-add_filter( 'excerpt_more', 'metro_magazine_excerpt_more' );
+add_filter( 'metro_magazine_excerpt_more', 'metro_magazine_excerpt_more' );
 add_filter( 'excerpt_length', 'metro_magazine_excerpt_length', 999 );
 
 /**

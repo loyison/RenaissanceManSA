@@ -251,7 +251,8 @@ function metro_magazine_colored_category(){
                 foreach( $categories_list as $category ){
                 $color_code = get_theme_mod( 'metro_magazine_category_color_' . $category->term_id );
                     if ( $color_code ) {
-                       $output .= '<a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" style="background:' . esc_attr( $color_code ) . '" rel="category tag">'. esc_html( $category->cat_name ) .'</a>';
+                       // $output .= '<a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" style="background:' . esc_attr( $color_code ) . '" rel="category tag">'. esc_html( $category->cat_name ) .'</a>';
+                    	$output .= '<a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" rel="category tag">'. esc_html( $category->cat_name ) .'</a>';
                     }else{
                        $output .= '<a class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '"  rel="category tag">' . esc_html( $category->cat_name ) . '</a>';
                     }
@@ -317,13 +318,14 @@ function metro_magazine_social_link_cb(){
     $linkedin    = get_theme_mod( 'metro_magazine_linkedin' );
     $instagram   = get_theme_mod( 'metro_magazine_instagram' );
     $google_plus = get_theme_mod( 'metro_magazine_google' );
-    $youtube     = get_theme_mod( 'metro_magazine_youtube' );    
     $pinterest   = get_theme_mod( 'metro_magazine_pinterest' );
-    $ok          = get_theme_mod( 'metro_magazine_odnoklassniki' );
-    $vk          = get_theme_mod( 'metro_magazine_vk' );
-    $xing        = get_theme_mod( 'metro_magazine_xing' );
+    $issuu		 = get_theme_mod( 'metro_magazine_issuu' );
+    //$youtube     = get_theme_mod( 'metro_magazine_youtube' );   
+    //$ok          = get_theme_mod( 'metro_magazine_odnoklassniki' );
+    //$vk          = get_theme_mod( 'metro_magazine_vk' );
+    //$xing        = get_theme_mod( 'metro_magazine_xing' );
     
-    if( $facebook || $twitter || $instagram || $google_plus || $pinterest || $youtube || $linkedin || $ok || $vk || $xing ){
+    if( $facebook || $twitter || $instagram || $google_plus || $pinterest || $issuu || $youtube || $linkedin || $ok || $vk || $xing ){
     ?>
 	<ul class="social-networks">
         <?php if( $facebook ){?>
@@ -336,16 +338,8 @@ function metro_magazine_social_link_cb(){
             <li><a href="<?php echo esc_url( $pinterest ) ?>" target="_blank" title="<?php esc_attr_e( 'Pinterest', 'metro-magazine' ); ?>"><i class="fa fa-pinterest"></i></a></li>
         <?php } if( $instagram ){?>
             <li><a href="<?php echo esc_url( $instagram ) ?>" target="_blank" title="<?php esc_attr_e( 'Instagram', 'metro-magazine' ); ?>"><i class="fa fa-instagram"></i></a></li>
-		<?php } if( $google_plus ){?>
-            <li><a href="<?php echo esc_url( $google_plus ) ?>" target="_blank" title="<?php esc_attr_e( 'Google Plus', 'metro-magazine' ); ?>"><i class="fa fa-google-plus"></i></a></li>
-		<?php } if( $youtube ){?>
-            <li><a href="<?php echo esc_url( $youtube ) ?>" target="_blank" title="<?php esc_attr_e( 'Youtube', 'metro-magazine' ); ?>"><i class="fa fa-youtube"></i></a></li>
-		<?php }  if( $ok ){?>
-            <li><a href="<?php echo esc_url( $ok );?>" target="_blank" title="<?php esc_attr_e( 'OK', 'metro-magazine' ); ?>"><i class="fa fa-odnoklassniki"></i></a></li>
-		<?php } if( $vk ){?>
-            <li><a href="<?php echo esc_url( $vk );?>" target="_blank" title="<?php esc_attr_e( 'VK', 'metro-magazine' ); ?>"><i class="fa fa-vk"></i></a></li>
-		<?php } if( $xing ){?>
-            <li><a href="<?php echo esc_url( $xing );?>" target="_blank" title="<?php esc_attr_e( 'Xing', 'metro-magazine' ); ?>"><i class="fa fa-xing"></i></a></li>
+		<?php } if( $issuu ){?>
+            <li><a href="<?php echo esc_url( $issuu ) ?>" target="_blank" title="<?php esc_attr_e( 'Issuu', 'metro-magazine' ); ?>"><i class="fa fa-issuu"></i></a></li>
 		<?php } ?>
 	</ul>
     <?php

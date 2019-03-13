@@ -235,16 +235,20 @@ function metro_magazine_featured_section(){
                             ?>
                             <li class="large">
                                 <article class="post">
-                                	<?php metro_magazine_colored_category(); ?>
+                                	<!-- <?php //metro_magazine_colored_category(); ?> -->
                     				<a href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_post_thumbnail( 'metro-magazine-featured-big', array( 'itemprop' => 'image' ) ); 
                                         ?>
                                     </a>
                 					<header class="entry-header">
+                                        <?php metro_magazine_colored_category(); ?>
                 						<h2 class="entry-title">
                                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                         </h2>
+                                        <div class="entry-meta">
+                                                <?php echo'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>' ?>
+                                            </div>
                 					</header>
                     			</article>
                     		</li>
@@ -263,16 +267,20 @@ function metro_magazine_featured_section(){
                             ?>
                             <li class="medium">
                                 <article class="post">
-                                	<?php metro_magazine_colored_category(); ?>
+                                	<!-- <?php //metro_magazine_colored_category(); ?> -->
                     				<a href="<?php the_permalink(); ?>">
                                         <?php 
                                              the_post_thumbnail( 'metro-magazine-featured-mid', array( 'itemprop' => 'image' ) ); 
                                         ?>
                                     </a>
                     				<header class="entry-header">
+                                        <?php metro_magazine_colored_category(); ?>
                 						<h2 class="entry-title">
                                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                         </h2>
+                                        <div class="entry-meta">
+                                                <?php echo'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>' ?>
+                                            </div>
                 					</header>
                     			</article>
                     		</li>
@@ -379,7 +387,7 @@ function metro_magazine_top_news_section(){
             					<article class="post">
             						<div class="image-holder">
             							<a href="<?php the_permalink(); ?>" class="post-thumbnail"><?php the_post_thumbnail( 'metro-magazine-three-col', array( 'itemprop' => 'image' ) ); ?></a>
-            							<?php metro_magazine_colored_category(); ?>
+            							<div style="background: rgba(0,0,0,0.5); display: block; height: 46px; position: absolute; left: 0; bottom: 0; width: 100%;"><?php metro_magazine_colored_category(); ?></div>
             						</div>
                                     <header class="entry-header">
                                         <div class="entry-meta">           						
@@ -630,7 +638,7 @@ function metro_magazine_more_news_content(){
            <section class="section-five">
     			<div class="container">
     				<header class="header">
-    					<h2 class="header-title"><span><?php if( $fifth_cat ){ echo esc_html( $cat->name ); }else{ esc_html_e( 'Latest Posts', 'metro-magazine' ); } ?></span></h2>
+    					<h2 class="header-title"><span><?php if( $fifth_cat ){ echo esc_html( $cat->name ); }else{ esc_html_e( 'Recent Posts', 'metro-magazine' ); } ?></span></h2>
     				</header>
     				
                     <?php 

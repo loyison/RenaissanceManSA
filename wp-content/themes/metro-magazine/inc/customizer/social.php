@@ -72,6 +72,24 @@
             'type' => 'text',
         )
     );
+
+    /** Issuu */
+    $wp_customize->add_setting(
+        'metro_magazine_issuu',
+        array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+    
+    $wp_customize->add_control(
+        'metro_magazine_issuu',
+        array(
+            'label' => __( 'Issuu', 'metro-magazine' ),
+            'section' => 'metro_magazine_social_settings',
+            'type' => 'text',
+        )
+    );
       
     /** LinkedIn */
     $wp_customize->add_setting(

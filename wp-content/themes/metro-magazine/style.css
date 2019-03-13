@@ -49,7 +49,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: 'PT Serif', serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -277,9 +277,9 @@ button,
 input,
 select,
 textarea {
-	color: #919191;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
+	color: #333;
+	/*font-family: 'Ubuntu', sans-serif;*/
+	font-size: 14px;
 	line-height: 24px;
 }
 
@@ -350,6 +350,10 @@ big {
 	font-size: 125%;
 }
 
+/*----------------------Font includes---------------------------*/
+/*must update to the local font*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -368,8 +372,9 @@ html {
 }
 
 body {
-	color:#919191;
-    font:16px/24px 'Ubuntu', sans-serif;
+	color:#333;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+    /*font:16px/24px 'Ubuntu', sans-serif;*/
     background:#fff;
      overflow-y: scroll;
     -webkit-text-size-adjust:100%;
@@ -462,7 +467,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	text-decoration: none;
-	color: #fff;
+	/*color: #fff;*/
 	background: #06509d;
 	border-color: #06509d
 }
@@ -476,7 +481,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	text-decoration: none;
-	color: #fff;
+	/*color: #fff;*/
 	background: #06509d;
 	border-color: #06509d
 }
@@ -547,7 +552,11 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	float: left;
+	/*float: left;*/
+	float: none;
+    margin-left: 23%;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .main-navigation ul {
@@ -573,7 +582,9 @@ a:active {
 }
 
 .main-navigation ul li a:hover,
-.main-navigation ul li a:focus{padding-top: 18px;}
+.main-navigation ul li a:focus{
+	/*padding-top: 18px;*/
+}
 
 .main-navigation ul ul {
 	position: absolute;
@@ -588,7 +599,7 @@ a:active {
 }
 
 .main-navigation ul ul:after{
-	background: url(images/arrow-up.png) no-repeat;
+	/*background: url(images/arrow-up.png) no-repeat;*/
 	width: 21px;
 	height: 13px;
 	position: absolute;
@@ -621,25 +632,25 @@ a:active {
 .main-navigation li.focus > a,
 .main-navigation ul li a:hover,
 .main-navigation ul li a:focus {
-	color: #06509d;
+	/*color: #06509d;
 	border-top: 3px solid #06509d;
-	padding-top: 18px;
+	padding-top: 18px;*/
 }
 
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
 	border-top: 0;
-	padding: 8px 15px;
-	background: #06509d;
+	/*padding: 8px 15px;
+	background: #06509d;*/
 	color: #fff;
 }
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a:focus {
 	border-top: 0;
-	padding: 8px 15px;
-	background: #06509d;
-	color: #fff;
+	/*padding: 8px 15px;*/
+	/*background: #06509d;*/
+	color: #000;
 }
 
 .main-navigation ul li:hover > ul,
@@ -656,11 +667,25 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	color: #06509d;
-	border-top: 3px solid #06509d;
-	padding-top: 18px;
+	color: #999;
+	/*border-top: 3px solid #06509d;
+	padding-top: 18px;*/
 }
 
+.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a {
+	color: #999;
+}
+/*.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a, 
+.main-navigation .current_page_ancestor > a, 
+.main-navigation .current-menu-ancestor > a, 
+.main-navigation li:hover > a, 
+.main-navigation li.focus > a, 
+.main-navigation ul li a:after, 
+.main-navigation ul li a:after {
+    content: ' : ';
+   /* margin-left: 5px;
+}*/
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1076,7 +1101,7 @@ object {
 
 .site-header .header-t{
 	padding: 8px 0 11px;
-	background: #386fa7;
+	background: #eee;
 }
 
 .site-header .header-t:after{
@@ -1090,16 +1115,16 @@ object {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	font-size: 14px;
+	font-size: 18px;
 	overflow: hidden;
 }
 
 .site-header .social-networks li{
 	float: left;
-	margin-left: 16px;
+	margin-left: 14px;
 }
 
-.site-header .social-networks li a{color: #eeeeee;}
+.site-header .social-networks li a{color: #000;}
 
 .site-header .social-networks li a:hover,
 .site-header .social-networks li a:focus{color: #bfbfbf;}
@@ -1111,7 +1136,10 @@ object {
 	clear: both;
 }
 
-.site-branding{float: left;}
+.site-branding{ 
+    /* float: left; */
+    text-align: center;
+    }
 
 .site-branding .custom-logo-link{
     display: inline-block;
@@ -1161,17 +1189,22 @@ object {
 .site-header .btn-search{
 	float: right;
 	color: #000;
-	font-size: 14px;
+	font-size: 23px;
 	margin-top: 19px;
 }
 
 .site-header .nav-holder{
-	
+	background: #eee;
 	padding-bottom: 6px;
+	position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .site-header .nav-holder .nav-content{
-	border-top: 1px solid #ebebeb;
+	/*border-top: 1px solid #ebebeb;*/
+	border-top: none;
 	margin-top: 20px;
 }
 
@@ -1186,6 +1219,7 @@ object {
     position: fixed;
     z-index: 9999;
     padding:5px 0 100px; 
+    height: 100%;
     left: 0;
     top: 0;
     width: 100%;
@@ -1236,7 +1270,7 @@ object {
 
 /*home-content style*/
 .home-content{
-	background: #f4f4f4;
+	background: #fff;
 	padding: 46px 0 63px;
 }
 
@@ -1301,8 +1335,12 @@ object {
 
 .all-post .post .category-holder{
 	position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 88888;
+	/*position: absolute;
 	top: 10px;
-	left: 10px;
+	left: 10px;*/
 }
 
 .all-post .post .category{
@@ -1321,7 +1359,8 @@ object {
 
 .all-post .post .entry-title{
 	margin-bottom: 0;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Playfair Display', serif;*/
 	font-weight: 400;
 }
 .all-post ul li .post .entry-title{
@@ -1350,7 +1389,7 @@ object {
 
 /*section-two style*/
 .section-two{
-	background: #f4f4f4;
+	/*background: #f4f4f4;*/
 	padding: 57px 0 29px;
 	margin: 0 0 0;
 }
@@ -1362,7 +1401,7 @@ object {
 .section-two .header .header-title{
 	font-size: 28px;
 	line-height: 32px;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Montserrat', sans-serif;
 	color: #000;
 	text-transform: uppercase;
 	text-align: center;
@@ -1475,7 +1514,7 @@ object {
 	line-height: 28px;
 	font-weight: 400;
 	color: #333;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 0 14px;
 }
 
@@ -1524,7 +1563,7 @@ object {
 .section-two .btn-holder a:hover,
 .section-two .btn-holder a:focus{
 	text-decoration: none;
-	color: #fff;
+	/*color: #fff;*/
 }
 
 .section-two .btn-holder a:before {
@@ -1869,7 +1908,7 @@ object {
 
 /*section-five style*/
 .section-five{
-	background: #f4f4f4;
+	/*background: #f4f4f4;*/
 	padding: 57px 0 29px 0;
 }
 
@@ -2322,7 +2361,7 @@ object {
 .single-post #crumbs,
 .page #crumbs,
 .search #crumbs,
-.error404 #crumbs{float: right;}
+.error404 #crumbs{float: left;}
 
 .single-post #primary .post{
 	border: 0;

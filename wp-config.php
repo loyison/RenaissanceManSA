@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'renain');
+define('DB_NAME', 'renaissancemen');
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -36,6 +36,8 @@ define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+define('CONCATENATE_SCRIPTS', false);
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -54,6 +56,7 @@ define('AUTH_SALT',        'jc*Xbl!+trw+}yB!zqzUpHa=$^@4/]<LJJ]EHR_e+Z6;v*cX[=Bq
 define('SECURE_AUTH_SALT', 'E0Rt1;2il/OR,Zl>gC~;J542<j:p%)th5LtFEeh`Szgz|C>.Rlv]z&k-m%,GQ<{q');
 define('LOGGED_IN_SALT',   '{f#?_{4rK$ysUO+3TvLi}6vqGcUi2B`JWVDeyIu4X|!`.7Z9sAz*e_;6:A@bd4g ');
 define('NONCE_SALT',       '{@ao5|wX~X=fkGN3U:RhteHOpFj_9V]H7pBb]8U:F8aY+sD3FT7{pMSE|`,3Gk`d');
+
 
 /**#@-*/
 
